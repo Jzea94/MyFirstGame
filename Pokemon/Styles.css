@@ -1,0 +1,19 @@
+img.pequeña{
+    width: 150px;
+    height: 150px;
+    margin-right: 45px;
+  }
+img.mediana{
+    width: 112px;
+    height: 150px;
+    margin-right: 100px;
+  }
+label.label{
+    margin-right: 100px;
+}
+
+body{
+    background-color: rgb(215, 215, 250);
+    text-align: center;
+}
+
