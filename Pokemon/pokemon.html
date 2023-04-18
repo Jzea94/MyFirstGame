@@ -12,7 +12,7 @@
 <body>
     <h1>POKEMON GAME</h1>
 
-    <section id="Seleccionar_pokemon">
+    <section id="Select_pokemon">
         <p>Select your pokemon:</p>
         
         <img  class="pequeña" src="img/Charizard.webp">
@@ -31,16 +31,18 @@
         
         <br>
         <p>
-            <button>Seletc</button>
+            <button id="button_Select_Pet">Seletc</button>
         </p>        
     </section>
 
-    <section id="Seleccionar_ataque">
-        Select attack
+    <section id="Select_Attack">
+        <h2>Select attack</h2>
+        <p>Your pet <span id="pet_Name"></span> has <span id="pet_Lives">3</span> lives</p>       
+        <p>The pet enemy  <span id="enemy_Pet_Name"></span> has <span id="pet_Lives">3</span> lives</p>       
         <p>
-            <button>Fire 🔥</button>
-            <button> Water 💧</button>
-            <button>Earth 🌱</button>
+            <button id="button_Attack_Fire">Fire 🔥</button>
+            <button id="button_Attack_Water"> Water 💧</button>
+            <button id="button_Attack_Earth">Earth 🌱</button>
 
         </p>
     </section>
@@ -48,7 +50,7 @@
     <section id="Reiniciar">
         Restart
         <p>
-            <button>Restart</button>
+            <button id="button_Reset">Restart</button>
         </p>
     </section>
 
