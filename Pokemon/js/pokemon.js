@@ -1,8 +1,10 @@
+/*------------------------------------------ Start Game ---------------------------------------------*/
 function startGame(){
     let buttonSelectPet = document.getElementById('button_Select_Pet')
     buttonSelectPet.addEventListener('click', selectPet)
 }
 
+/*------------------------------------ Select Pet Player1-------------------------------------------*/
 function selectPet (){
 
     let inputCharizard = document.getElementById('charizard')
@@ -19,10 +21,10 @@ function selectPet (){
     }    else{
         alert('Selected a pet')
     }
-
     selectEnemyPet()
 }
 
+/*------------------------------------ Select Pet Enemy-------------------------------------------*/
 function selectEnemyPet(){
     let  enemyPetName = aleatorio(1,3)
     let spanEnemyPetName = document.getElementById('enemy_Pet_Name')
@@ -33,11 +35,10 @@ function selectEnemyPet(){
     } else{
         spanEnemyPetName.innerHTML = 'Nidoking'
     }
-
 }
-
 function aleatorio (min, max){
-   return Math.floor(Math.random() * (max - min +1)+1)
+    return Math.floor(Math.random() * (max - min +1)+1)
 }
+/*------------------------------  HTML loaded in the browser ---------------------------------*/
 
 window.addEventListener('load', startGame)

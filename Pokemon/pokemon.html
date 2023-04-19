@@ -11,20 +11,20 @@
 
 <body>
     <h1>POKEMON GAME</h1>
-
+<!----------------------------------------------      Pokemon Selection   -------------------------------------------->
     <section id="Select_pokemon">
         <p>Select your pokemon:</p>
         
-        <img  class="pequeña" src="img/Charizard.webp">
-        <img class="mediana" src="img/Vaporeon.webp">
-        <img class="pequeña" src="img/Nidoking.webp">
+        <img  id="imgCharizard" src="img/Charizard.webp">
+        <img id="imgVaporeon" src="img/Vaporeon.webp">
+        <img id="imgNidoking" src="img/Nidoking.webp">
 
         <br>
         <input type="radio" class="radio" name="mascota"  id="charizard">
-        <label for="charizard" class="label"> Charizard 🔥</label>
+        <label for="charizard" class="label" id="labelCharizard"> Charizard 🔥</label>
 
         <input type="radio" class="radio" name="mascota" id="vaporeon">
-        <label for="vaporeon" class="label"> Vaporeon 💧</label>
+        <label for="vaporeon" class="label" id="labelVaporeon"> Vaporeon 💧</label>
 
         <input type="radio" class="radio" name="mascota" id="nidoking">
         <label for="nidoking" class="label"> Nidoking 🌱</label>
@@ -34,7 +34,7 @@
             <button id="button_Select_Pet">Seletc</button>
         </p>        
     </section>
-
+<!---------------------------------------------------      Slect Attack   --------------------------------------------------->
     <section id="Select_Attack">
         <h2>Select attack</h2>
         <p>Your pet <span id="pet_Name"></span> has <span id="pet_Lives">3</span> lives</p>       
@@ -46,9 +46,8 @@
 
         </p>
     </section>
-
+<!---------------------------------------------------      Slect Attack   --------------------------------------------------->
     <section id="Reiniciar">
-        Restart
         <p>
             <button id="button_Reset">Restart</button>
         </p>

@@ -1,17 +1,26 @@
-img.pequeña{
+/* --------------------------Image Style------------------------- */
+#imgCharizard{
     width: 150px;
     height: 150px;
-    margin-right: 45px;
-  }
-img.mediana{
+}
+#imgVaporeon{
     width: 112px;
     height: 150px;
-    margin-right: 100px;
-  }
-label.label{
-    margin-right: 100px;
+    margin-left: 45px;
+    margin-right: 45px;
 }
-
+#imgNidoking{
+   width: 150px;
+   height: 150px;
+}
+/* --------------------------Labels Style------------------------- */
+#labelCharizard{
+  padding-right: 8%;
+}
+#labelVaporeon{
+  padding-right: 8%;
+}
+/* --------------------------Body Style------------------------- */
 body{
     background-color: rgb(215, 215, 250);
     text-align: center;
