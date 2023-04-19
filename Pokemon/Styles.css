@@ -6,19 +6,19 @@
 #imgVaporeon{
     width: 112px;
     height: 150px;
-    margin-left: 45px;
-    margin-right: 45px;
+    padding-left: 4%;
 }
 #imgNidoking{
    width: 150px;
    height: 150px;
+   padding-left: 5%;
 }
 /* --------------------------Labels Style------------------------- */
 #labelCharizard{
-  padding-right: 8%;
+  padding-right: 5%;
 }
 #labelVaporeon{
-  padding-right: 8%;
+  padding-right: 5%;
 }
 /* --------------------------Body Style------------------------- */
 body{

@@ -1,7 +1,21 @@
+/*------------------------------------------ Global Variables---------------------------------------------*/
+let attackPlayer
+let varAttackEnemy
+
 /*------------------------------------------ Start Game ---------------------------------------------*/
 function startGame(){
     let buttonSelectPet = document.getElementById('button_Select_Pet')
     buttonSelectPet.addEventListener('click', selectPet)
+
+    let buttonAttackFire = document.getElementById('button_Attack_Fire')
+    buttonAttackFire.addEventListener('click' , attackFire )
+    
+    let buttonAttackWater = document.getElementById('button_Attack_Water')
+    buttonAttackWater.addEventListener('click' , attackWater )
+    
+    let buttonAttackEarth = document.getElementById('button_Attack_Earth')
+    buttonAttackEarth.addEventListener('click' , attackEart)
+
 }
 
 /*------------------------------------ Select Pet Player1-------------------------------------------*/
@@ -39,6 +53,44 @@ function selectEnemyPet(){
 function aleatorio (min, max){
     return Math.floor(Math.random() * (max - min +1)+1)
 }
+/*----------------------------------------  Attack Player -----------------------------------------*/
+
+function  attackFire (){    
+    attackPlayer = 'Fire'
+    attackEnemy()
+}
+function attackWater(){
+    attackPlayer = 'Water'
+    attackEnemy()
+}
+function attackEart(){
+    attackPlayer = 'Earth'
+    attackEnemy()
+}
+
+/*----------------------------------------  Attack Enemy -----------------------------------------*/
+function attackEnemy(){
+    let randomAttackEnemy = aleatorio(1,3)
+        
+    if (randomAttackEnemy == 1){
+        varAttackEnemy = 'Fire'
+    } else if (randomAttackEnemy == 2){
+        varAttackEnemy = 'Water'
+    } else{
+        varAttackEnemy = 'Earth'
+    }    
+    createMassage()
+}
+/*------------------------------  HTML loaded in the browser ---------------------------------*/
+function createMassage(){
+    let sectionMessage = document.getElementById('message')
+
+    let paragraph = document.createElement('p')
+    paragraph.innerHTML = 'You attack with '+ attackPlayer + ' --- Enemy pet attack with '+varAttackEnemy
+
+    sectionMessage.appendChild(paragraph)
+}
+
 /*------------------------------  HTML loaded in the browser ---------------------------------*/
 
 window.addEventListener('load', startGame)
