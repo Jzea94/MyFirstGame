@@ -2,6 +2,8 @@
 let attackPlayer
 let varAttackEnemy
 let varBattleResult
+let varPlayerPetLives = 3
+let varEnemyPetLives = 3
 
 /*------------------------------------------ Start Game ---------------------------------------------*/
 function startGame(){
@@ -80,21 +82,35 @@ function attackEnemy(){
     } else{
         varAttackEnemy = 'Earth'
     }    
-    battle()
-    createMassage()    
+    while (varPlayerPetLives >= 0 && varEnemyPetLives >= 0){
+        battle()
+        createMassage() 
+    }
 }
 /*---------------------------------  Battle  ------------------------------------*/
 function battle(){
+    let spanPlayerPetLives = document.getElementById('player_Pet_Lives')
+    let spanEnemyPetLives = document.getElementById('enemy_Pet_Lives')
+
     if (attackPlayer == varAttackEnemy){
         varBattleResult = '⚔️'
-    } else if (attackPlayer == 'Fire' & varAttackEnemy == 'Earth'){
+    } else if (attackPlayer == 'Fire' && varAttackEnemy == 'Earth'){
         varBattleResult = '🏅'
-    } else if (attackPlayer == 'Water' & varAttackEnemy == 'Fire'){
+        varEnemyPetLives--
+        spanEnemyPetLives.innerHTML = varEnemyPetLives
+    } else if (attackPlayer == 'Water' && varAttackEnemy == 'Fire'){
         varBattleResult = '🏅'
-    }else if (attackPlayer == 'Earth' & varAttackEnemy == 'Water'){
+        varEnemyPetLives--
+        spanEnemyPetLives.innerHTML = varEnemyPetLives
+    }else if (attackPlayer == 'Earth' && varAttackEnemy == 'Water'){
         varBattleResult = '🏅'
+        varEnemyPetLives--
+        spanEnemyPetLives.innerHTML = varEnemyPetLives
     } else{
         varBattleResult = '😵'
+        varPlayerPetLives--
+        spanPlayerPetLives.innerHTML = varPlayerPetLives
+
     }
 }
 /*------------------------------  Battle Result Message ---------------------------------*/
