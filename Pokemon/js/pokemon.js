@@ -19,6 +19,9 @@ function startGame(){
     let buttonAttackEarth = document.getElementById('button_Attack_Earth')
     buttonAttackEarth.addEventListener('click' , attackEart)
 
+    let buttonRestart = document.getElementById('button_Reset')
+    buttonRestart.addEventListener('click' , restartGame)
+
 }
 
 /*------------------------------------ Select Pet Player1-------------------------------------------*/
@@ -82,10 +85,7 @@ function attackEnemy(){
     } else{
         varAttackEnemy = 'Earth'
     }    
-    while (varPlayerPetLives >= 0 && varEnemyPetLives >= 0){
-        battle()
-        createMassage() 
-    }
+    battle()
 }
 /*---------------------------------  Battle  ------------------------------------*/
 function battle(){
@@ -110,7 +110,13 @@ function battle(){
         varBattleResult = '😵'
         varPlayerPetLives--
         spanPlayerPetLives.innerHTML = varPlayerPetLives
+    }
+    createMassage()     
 
+    if (varPlayerPetLives == 0){
+        finalMessage('You Loser ☠️')
+    } else if(varEnemyPetLives == 0){
+        finalMessage('You Winner 🏆')
     }
 }
 /*------------------------------  Battle Result Message ---------------------------------*/
@@ -121,6 +127,28 @@ function createMassage(){
     paragraph.innerHTML = 'You attack with '+attackPlayer + ' --- Enemy pet attack with '+varAttackEnemy+' --- '+varBattleResult
 
     sectionMessage.appendChild(paragraph)
+}
+
+function finalMessage(result){
+    let sectionMessage = document.getElementById('message')
+    let paragraph = document.createElement('p')
+
+    paragraph.innerHTML = result
+    sectionMessage.appendChild(paragraph)
+
+    let buttonAttackFire = document.getElementById('button_Attack_Fire')
+    buttonAttackFire.disabled = true
+    
+    let buttonAttackWater = document.getElementById('button_Attack_Water')
+    buttonAttackWater.disabled = true
+    
+    let buttonAttackEarth = document.getElementById('button_Attack_Earth')
+    buttonAttackEarth.disabled = true
+}
+
+/*----------------------------------------  Restart Game ------------------------------------------*/
+function restartGame(){
+    location.reload()
 }
 /*------------------------------  HTML loaded in the browser ---------------------------------*/
 
