@@ -12,44 +12,49 @@
 
 <body>
     <h1>POKEMON GAME</h1>
-
-    <section id="Seleccionar_pokemon">
+<!----------------------------------------------      Pokemon Selection   -------------------------------------------->
+    <section id="Select_pokemon">
         <p>Select your pokemon:</p>
         
-        <img  class="pequeña" src="img/Charizard.webp">
-        <img class="mediana" src="img/Vaporeon.webp">
-        <img class="pequeña" src="img/Nidoking.webp">
+        <img  id="imgCharizard" src="img/Charizard.webp">
+        <img id="imgVaporeon" src="img/Vaporeon.webp">
+        <img id="imgNidoking" src="img/Nidoking.webp">
 
         <br>
         <input type="radio" class="radio" name="mascota"  id="charizard">
-        <label for="charizard" class="label"> Charizard 🔥</label>
+        <label for="charizard" class="label" id="labelCharizard"> Charizard 🔥</label>
 
         <input type="radio" class="radio" name="mascota" id="vaporeon">
-        <label for="vaporeon" class="label"> Vaporeon 💧</label>
+        <label for="vaporeon" class="label" id="labelVaporeon"> Vaporeon 💧</label>
 
         <input type="radio" class="radio" name="mascota" id="nidoking">
         <label for="nidoking" class="label"> Nidoking 🌱</label>
         
         <br>
         <p>
-            <button>Seletc</button>
+            <button id="button_Select_Pet">Seletc</button>
         </p>        
     </section>
-
-    <section id="Seleccionar_ataque">
-        Select attack
+<!---------------------------------------------------      Slect Attack   --------------------------------------------------->
+    <section id="Select_Attack">
+        <p>Your pet <span id="pet_Name"></span> has <span id="player_Pet_Lives">3</span> lives</p>       
+        <p>The pet enemy  <span id="enemy_Pet_Name"></span> has <span id="enemy_Pet_Lives">3</span> lives</p>       
+        <h2>Select attack</h2>
         <p>
-            <button>Fire 🔥</button>
-            <button> Water 💧</button>
-            <button>Earth 🌱</button>
+            <button id="button_Attack_Fire">Fire 🔥</button>
+            <button id="button_Attack_Water"> Water 💧</button>
+            <button id="button_Attack_Earth">Earth 🌱</button>
 
         </p>
     </section>
-
+<!-----------------------------------------------------  Message  --------------------------------------------------->
+<section id="message" >        
+</section>
+<!------------------------------------------------------   Footer  ----------------------------------------------------->
     <section id="Reiniciar">
-        ----------------------------------------------------
+        Restart
         <p>
-            <button>Restart</button>
+            <button id="button_Reset">Restart</button>
         </p>
     </section>
 
