@@ -1,6 +1,7 @@
 /*------------------------------------------ Global Variables---------------------------------------------*/
 let attackPlayer
 let varAttackEnemy
+let varBattleResult
 
 /*------------------------------------------ Start Game ---------------------------------------------*/
 function startGame(){
@@ -79,18 +80,32 @@ function attackEnemy(){
     } else{
         varAttackEnemy = 'Earth'
     }    
-    createMassage()
+    battle()
+    createMassage()    
 }
-/*------------------------------  HTML loaded in the browser ---------------------------------*/
+/*---------------------------------  Battle  ------------------------------------*/
+function battle(){
+    if (attackPlayer == varAttackEnemy){
+        varBattleResult = '⚔️'
+    } else if (attackPlayer == 'Fire' & varAttackEnemy == 'Earth'){
+        varBattleResult = '🏅'
+    } else if (attackPlayer == 'Water' & varAttackEnemy == 'Fire'){
+        varBattleResult = '🏅'
+    }else if (attackPlayer == 'Earth' & varAttackEnemy == 'Water'){
+        varBattleResult = '🏅'
+    } else{
+        varBattleResult = '😵'
+    }
+}
+/*------------------------------  Battle Result Message ---------------------------------*/
 function createMassage(){
     let sectionMessage = document.getElementById('message')
-
     let paragraph = document.createElement('p')
-    paragraph.innerHTML = 'You attack with '+ attackPlayer + ' --- Enemy pet attack with '+varAttackEnemy
+
+    paragraph.innerHTML = 'You attack with '+attackPlayer + ' --- Enemy pet attack with '+varAttackEnemy+' --- '+varBattleResult
 
     sectionMessage.appendChild(paragraph)
 }
-
 /*------------------------------  HTML loaded in the browser ---------------------------------*/
 
 window.addEventListener('load', startGame)
