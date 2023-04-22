@@ -9,49 +9,50 @@
     <script src="./js/pokemon.js"></script>
     <link rel="stylesheet" href="./Styles.css">
 </head>
-
 <body>
-    <h1>POKEMON GAME</h1>
-<!----------------------------------------------      Pokemon Selection   -------------------------------------------->
+    <!----------------------------------------------      Pokemon Selection   -------------------------------------------->
     <section id="Select_pokemon">
+        <img src="./img/poke.png" id="tittle">
         <p>Select your pokemon:</p>
+
+        <section id="Images">
+            <img  id="imgCharizard" src="img/Charizard.webp">
+            <img id="imgVaporeon" src="img/Vaporeon.webp">
+            <img id="imgNidoking" src="img/Nidoking.webp">
+        </section>        
         
-        <img  id="imgCharizard" src="img/Charizard.webp">
-        <img id="imgVaporeon" src="img/Vaporeon.webp">
-        <img id="imgNidoking" src="img/Nidoking.webp">
+        <section id="radios">
+            <input type="radio" class="radio" name="mascota"  id="charizard">
+            <label for="charizard" class="label" id="labelCharizard"> Charizard 🔥</label>
+    
+            <input type="radio" class="radio" name="mascota" id="vaporeon">
+            <label for="vaporeon" class="label" id="labelVaporeon"> Vaporeon 💧</label>
+    
+            <input type="radio" class="radio" name="mascota" id="nidoking">
+            <label for="nidoking" class="label"> Nidoking 🌱</label>
+        </section>
 
-        <br>
-        <input type="radio" class="radio" name="mascota"  id="charizard">
-        <label for="charizard" class="label" id="labelCharizard"> Charizard 🔥</label>
-
-        <input type="radio" class="radio" name="mascota" id="vaporeon">
-        <label for="vaporeon" class="label" id="labelVaporeon"> Vaporeon 💧</label>
-
-        <input type="radio" class="radio" name="mascota" id="nidoking">
-        <label for="nidoking" class="label"> Nidoking 🌱</label>
-        
-        <br>
         <p>
             <button id="button_Select_Pet">Seletc</button>
         </p>        
     </section>
-<!---------------------------------------------------      Slect Attack   --------------------------------------------------->
+ <!---------------------------------------------------      Slect Attack   --------------------------------------------------->
     <section id="Select_Attack">
         <p>Your pet <span id="pet_Name"></span> has <span id="player_Pet_Lives">3</span> lives</p>       
         <p>The pet enemy  <span id="enemy_Pet_Name"></span> has <span id="enemy_Pet_Lives">3</span> lives</p>       
         <h2>Select attack</h2>
+
         <p>
             <button id="button_Attack_Fire">Fire 🔥</button>
             <button id="button_Attack_Water"> Water 💧</button>
             <button id="button_Attack_Earth">Earth 🌱</button>
-
         </p>
     </section>
-<!-----------------------------------------------------  Message  --------------------------------------------------->
-<section id="message" >        
-</section>
-<!------------------------------------------------------   Footer  ----------------------------------------------------->
-    <section id="Reiniciar">
+ <!-----------------------------------------------------  Message  --------------------------------------------------->
+    <section id="message" >        
+    </section>
+ <!------------------------------------------------------   Footer  ----------------------------------------------------->
+    <section id="Restart">
         <p>
             <button id="button_Reset">Restart</button>
         </p>

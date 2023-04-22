@@ -7,6 +7,12 @@ let varEnemyPetLives = 3
 
 /*------------------------------------------ Start Game ---------------------------------------------*/
 function startGame(){
+    let hideButtonRestart = document.getElementById('Restart')
+    hideButtonRestart.style.display = 'none'
+
+    let hideAttack = document.getElementById('Select_Attack')
+    hideAttack.style.display = 'none'
+
     let buttonSelectPet = document.getElementById('button_Select_Pet')
     buttonSelectPet.addEventListener('click', selectPet)
 
@@ -26,21 +32,31 @@ function startGame(){
 
 /*------------------------------------ Select Pet Player1-------------------------------------------*/
 function selectPet (){
-
+    let showAttack = document.getElementById('Select_Attack')  
+    let hideSelectPet = document.getElementById('Select_pokemon')
+    
     let inputCharizard = document.getElementById('charizard')
     let inputVaporeon = document.getElementById('vaporeon')
     let inputNidoking = document.getElementById('nidoking')
     let spanPetName = document.getElementById('pet_Name')
-
+    
     if (inputCharizard.checked){
         spanPetName.innerHTML= 'Charizard'
+        showAttack.style.display = 'block'
+        hideSelectPet.style.display = 'none'
     }    else if (inputVaporeon.checked){
         spanPetName.innerHTML= 'Vaporeon'
+        showAttack.style.display = 'block'
+        hideSelectPet.style.display = 'none'
     }    else if (inputNidoking.checked){
         spanPetName.innerHTML= 'Nidoking'
+        showAttack.style.display = 'block'
+        hideSelectPet.style.display = 'none'
     }    else{
         alert('Selected a pet')
+        showAttack.style.display = 'none'
     }
+    
     selectEnemyPet()
 }
 
@@ -144,6 +160,9 @@ function finalMessage(result){
     
     let buttonAttackEarth = document.getElementById('button_Attack_Earth')
     buttonAttackEarth.disabled = true
+
+    let showButtonRestart = document.getElementById('Restart')
+    showButtonRestart.style.display = 'block'
 }
 
 /*----------------------------------------  Restart Game ------------------------------------------*/

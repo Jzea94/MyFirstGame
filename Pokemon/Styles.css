@@ -1,28 +1,52 @@
-/* --------------------------Image Style------------------------- */
 #imgCharizard{
-    width: 150px;
-    height: 150px;
-}
-#imgVaporeon{
-    width: 112px;
-    height: 150px;
-    padding-left: 4%;
-}
-#imgNidoking{
-   width: 150px;
-   height: 150px;
-   padding-left: 5%;
-}
-/* --------------------------Labels Style------------------------- */
-#labelCharizard{
-  padding-right: 5%;
-}
-#labelVaporeon{
-  padding-right: 5%;
-}
-/* --------------------------Body Style------------------------- */
-body{
-    background-color: rgb(215, 215, 250);
-    text-align: center;
+  width: 150px;
+  height: 150px;    
 }
 
+#imgVaporeon{
+  width: 112px;
+  height: 150px;
+}
+
+#imgNidoking{
+  width: 150px;
+  height: 150px;
+}
+
+#tittle{
+width: 350px;
+}
+
+body{
+  background-color: rgb(215, 215, 250);
+  background-image: url('./img/background_body.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+}
+
+#Select_pokemon{
+  width: 600px;
+  height: 500px;  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid rgb(0, 0, 0); */
+  border-radius: 2%;
+  background-color: rgba(170, 153, 201, 0.644);
+}
+
+#radios{
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#Images{
+  width: 500px;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
